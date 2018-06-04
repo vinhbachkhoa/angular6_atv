@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 @NgModule({
   imports: [
@@ -22,9 +22,16 @@ import { environment } from '../../environments/environment';
     AngularFireAuthModule
   ],
   declarations: [
+    IssueComponent,
     CreateIssueComponent,
     ListIssuesComponent,
-    IssueDetailComponent 
+    IssueDetailComponent
+  ],
+  exports: [
+    IssueComponent,
+    CreateIssueComponent,
+    ListIssuesComponent,
+    IssueDetailComponent
   ],
   providers: [IssueService],
 })

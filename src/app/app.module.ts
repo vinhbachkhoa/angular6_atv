@@ -3,21 +3,29 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
-import { IssueModule } from './issue/issue.module';
-import { IssueComponent } from './issue/issue.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { IssueModule } from './component/issue/issue.module';
+import { AppRoutingModule } from './app-routing.module';
+import { IssueRoutingModule } from './component/issue/issue-routing.module';
+import { HeaderModule } from './layout/header/header.module';
+import { FooterModule } from './layout/footer/footer.module';
+import { HomeModule } from './component/home/home.module';
+import { SideBarModule } from './layout/side-bar/side-bar.module';
+import { AuthComponent } from './core/auth/auth.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
-    IssueComponent
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
     IssueModule,
-    AppRoutingModule
+    HeaderModule,
+    FooterModule,
+    HomeModule,
+    SideBarModule,
+    AppRoutingModule,
+    IssueRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
