@@ -1,0 +1,57 @@
+<div class="add-form">
+  <div class="container">
+    <form #addForm="ngForm" class="needs-validation" novalidate (ngSubmit)="addIssueToList(addForm)">
+      <h2>Add New Issue</h2>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label>Title:</label>
+          <input [(ngModel)]="curIssue.title" #name="ngModel" name="title" type="text" id="validationCustom01" class="form-control"
+            placeholder="Name" required/>
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Title is required
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label>Cause:</label>
+          <input [(ngModel)]="curIssue.status" name="status" #status="ngModel" type="text" class="form-control" id="validationCustom02"
+            placeholder="example@gmail.com" required/>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              Email is required
+            </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label>Phone:</label>
+          <input [(ngModel)]="curIssue.cause" name="cause" #cause="ngModel" type="text" class="form-control" id="validationCustom03"
+            placeholder="Phone" required/>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              Phone is required
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>City:</label>
+          <input [(ngModel)]="curIssue.solution" name="solution" #solution="ngModel" type="text" class="form-control" id="validationCustom04"
+            placeholder="City" required/>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              City is required
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>State:</label>
+          <input [(ngModel)]="curIssue.note" name="note" #note="ngModel" type="text" class="form-control" id="validationCustom05"
+            placeholder="State" required/>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              State is required
+            </div>
+        </div>
+      </div>
+      <button (click)="goBack()" class="btn btn-outline-primary">
+        Cancel
+      </button>
+      <button [disabled]="!addForm.valid" class="btn btn-primary" type="submit">
+        Create Issue
+      </button>
+    </form>
+  </div>
+</div>

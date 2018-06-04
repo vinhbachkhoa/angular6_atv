@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>List Issue</h2>
+  <div class="row">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th class="text-right" style="padding-right: 55px;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let issue of issueList" class="item">
+          <td>
+              {{issue.title}}
+          </td>
+          <td class="text-right">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <button type="button" class="btn btn-lg btn-outline-primary">+</button>
+</div>

@@ -1,0 +1,12 @@
+<div *ngIf="issue">
+  <div class="container">
+    <h2>{{ issue.title | uppercase }}</h2>
+    <div class="row">
+      <div class="col-md-3">Cause:</div>
+      <div class="col-md-6">{{issue.cause}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">Solution:</div>
+        <div class="col-md-6">{{issue.solution}}</div>
+    </div>
+  </div>
